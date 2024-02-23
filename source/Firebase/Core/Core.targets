@@ -214,7 +214,7 @@
 
     <!-- Strip the bitcode from frameworks -->
     <Exec SessionId="$(BuildSessionId)"
-          Command="&quot;%24(xcrun -find bitcode_strip)&quot; %(_FrameworksToStripBitcode.Identity) -r -o %(_FrameworksToStripBitcode.Identity)" />
+          Command="&quot;%24(xcrun -find bitcode_strip)&quot; &quot;%(_FrameworksToStripBitcode.Identity)&quot; -r -o &quot;%(_FrameworksToStripBitcode.Identity)&quot;" />
 
     <CopyFileFromBuildServer 
       SessionId="$(BuildSessionId)" 
